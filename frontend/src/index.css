@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #f3f4f6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: #1a1a1a;
+}
+
+/* Estilos para los mensajes del chat */
+.message-bubble {
+  max-width: 80%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.user-message {
+  background-color: #3b82f6;
+  color: white;
+  margin-left: auto;
+  border-top-right-radius: 0;
+}
+
+.agent-message {
+  background-color: #e5e7eb;
+  color: #1f2937;
+  margin-right: auto;
+  border-top-left-radius: 0;
+}
+
+/* Animación para los puntos de carga */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 0.6s infinite;
+}
+
+/* Estilos para el área de mensajes */
+.messages-container {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.messages-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages-container::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 3px;
+}
+
+/* Estilos para el textarea autoajustable */
+.chat-input {
+  min-height: 40px;
+  max-height: 120px;
+  resize: none;
+  overflow-y: auto;
+  line-height: 1.5;
+}
